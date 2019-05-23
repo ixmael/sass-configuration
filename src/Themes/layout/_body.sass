@@ -1,3 +1,17 @@
-body
+body // Modifica los estilos del body
   background: $background-color
   color: $text-color
+
+  & div // genera la regla CSS: body div
+    background: green
+
+    &.content // genera la regla CSS: body div.content
+      color: red
+    
+  
+  & button // genera la regla CSS: body button
+    border: none
+    background: blue
+
+    &:hover // genera la regla CSS: body button:hover
+      background: lighten(blue, 0.5)
