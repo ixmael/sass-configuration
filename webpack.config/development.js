@@ -9,10 +9,13 @@ const common = require("./common");
 const PROJECT_PATH = process.cwd();
 
 const development = {
+  mode: "development",
   devtool: 'inline-source-map',
   watch: true,
   devServer: {
-    hot: true
+    hot: true,
+    contentBase: path.join(__dirname, 'dist'),
+    port: 9000,
   },
   mode: "development",
   plugins: [
